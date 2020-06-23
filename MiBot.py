@@ -81,3 +81,5 @@ async def on_ready():
     await Bot.change_presence(status=discord.Status.idle,activity=discord.Game("MiBot.io"))
 
 token = os.environ.get('BOT_TOKEN')
+
+bot.run(str(token))
