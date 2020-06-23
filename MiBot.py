@@ -70,15 +70,15 @@ async def ban(ctx,member:discord.Member,reason):
 @Bot.command()
 @commands.has_permissions(view_audit_log=True)
 async def clear(ctx,amount=1):
-    deleted = await ctx.message.channel.purge(limit=amount + 1)
+    clear = await ctx.message.channel.purge(limit=amount + 1)
 @Bot.command()
 @commands.has_permissions(view_audit_log=True)
 async def clear_all(ctx,amount=9999):
-    deleted = await ctx.message.channel.purge(limit=amount)
+    clear = await ctx.message.channel.purge(limit=amount)
 @Bot.event
 async def on_ready():
     print("Бот запустился")
-    await Bot.change_presence(status=discord.Status.idle,activity=discord.Game("MiBot.io"))
+    clear Bot.change_presence(status=discord.Status.idle,activity=discord.Game("MiBot.io"))
 
 token = os.environ.get('BOT_TOKEN')
 
