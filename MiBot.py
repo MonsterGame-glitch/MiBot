@@ -78,7 +78,7 @@ async def clear_all(ctx,amount=9999):
 @Bot.event
 async def on_ready():
     print("Бот запустился")
-    clear Bot.change_presence(status=discord.Status.idle,activity=discord.Game("MiBot.io"))
+    await Bot.change_presence(status=discord.Status.idle,activity=discord.Game("MiBot.io"))
 
 token = os.environ.get('BOT_TOKEN')
 
