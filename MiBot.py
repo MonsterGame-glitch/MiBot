@@ -82,4 +82,4 @@ async def on_ready():
 
 token = os.environ.get('BOT_TOKEN')
 
-bot.run(str(token))
+Bot.run(str(token))
